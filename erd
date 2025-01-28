@@ -1,0 +1,26 @@
+digraph {
+	S [label="Staff
+StaffID (PK)
+StaffName
+StaffTelephone
+StaffStreet
+PostCode
+StaffType
+StartDate
+JobID (FK)"]
+	J [label="Job
+JobID (PK)
+JobTitle
+SchoolID (FK)"]
+	C [label="School
+SchoolID (PK)
+SchoolName"]
+	P [label="Performance
+MeetingID (PK)
+StaffID (FK)
+MeetingDate
+PerformanceGrade"]
+	S -> J [label=JobID]
+	J -> C [label=SchoolID]
+	S -> P [label=StaffID]
+}
